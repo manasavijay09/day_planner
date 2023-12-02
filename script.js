@@ -16,6 +16,8 @@ $(function () {
     let apptTime=$(this).parent().attr("id").split("-")[1];
     console.log("apptTime = ", apptTime);
 
+    localStorage.setItem(apptTime,apptText);
+
   }
   $(".saveBtn").on("click", saveHandler);
   // TODO: Add code to apply the past, present, or future class to each time
