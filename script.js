@@ -12,6 +12,10 @@ $(function () {
   function saveHandler(){
     let apptText=$(this).siblings(".description").val();
     console.log("apptText = ", apptText);
+
+    let apptTime=$(this).parent().attr("id").split("-")[1];
+    console.log("apptTime = ", apptTime);
+
   }
   $(".saveBtn").on("click", saveHandler);
   // TODO: Add code to apply the past, present, or future class to each time
