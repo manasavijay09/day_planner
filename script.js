@@ -23,13 +23,15 @@ $(function () {
   }
   $(".saveBtn").on("click", saveHandler);
 
-  var currentHour = 12 // dayjs().hour()
+  var currentHour =  dayjs().hour()
   console.log(currentHour,"Current Time")
   // Var - function scope, let-block scope
 
   for(let i=9;i<18;i++){
     var timeBlockId= "#hour-"+i
     console.log(timeBlockId)
+    var dataStore= localStorage.getItem(i)
+    $(timeBlockId).children(".description").val(dataStore)
     if(i < currentHour){
       $(timeBlockId).children(".description").addClass("past")
     }else if(i===currentHour){
