@@ -1,6 +1,8 @@
-var dateTime=$("#currentDay");
-var button=$("btn saveBtn");
-//var currentHour=moment().hour();
+//var currentDay = $("#currentDay");
+//var button = $("saveBtn");
+//var timeBlockE1 = document.querySelector('.container');
+
+
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
@@ -21,6 +23,22 @@ $(function () {
   }
   $(".saveBtn").on("click", saveHandler);
 
+  var currentHour = 12 // dayjs().hour()
+  console.log(currentHour,"Current Time")
+  // Var - function scope, let-block scope
+
+  for(let i=9;i<18;i++){
+    var timeBlockId= "#hour-"+i
+    console.log(timeBlockId)
+    if(i < currentHour){
+      $(timeBlockId).children(".description").addClass("past")
+    }else if(i===currentHour){
+      $(timeBlockId).children(".description").addClass("present")
+
+    }else{
+      $(timeBlockId).children(".description").addClass("future")
+    }
+  }
  
 
   // TODO: Add code to apply the past, present, or future class to each time
