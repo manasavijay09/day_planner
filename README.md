@@ -24,3 +24,11 @@ WHEN I click the save button for that timeblock
 THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
+
+Screenshot of Diployed application:
+![Alt text](image-1.png)
+
+
+GitHub link: https://github.com/manasavijay09/day_planner
+
+GitHub live diployed link:  https://manasavijay09.github.io/day_planner/
